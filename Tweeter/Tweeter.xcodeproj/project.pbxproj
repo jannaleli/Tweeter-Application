@@ -19,6 +19,7 @@
 		AB51E58F22523C7C00263F0A /* TweeterLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */; };
 		AB51E59022523C7C00263F0A /* TweeterLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */; };
 		AB51E59122523C7D00263F0A /* TweeterLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */; };
+		ABC6C3412253B547008A448C /* TweeterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6C3402253B547008A448C /* TweeterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AB51E57D2251D0ED00263F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB51E58C22523A5800263F0A /* TweeterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeterViewController.swift; sourceTree = "<group>"; };
 		AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeterLogicController.swift; sourceTree = "<group>"; };
+		ABC6C3402253B547008A448C /* TweeterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AB51E58C22523A5800263F0A /* TweeterViewController.swift */,
+				ABC6C3402253B547008A448C /* TweeterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC6C3412253B547008A448C /* TweeterCell.swift in Sources */,
 				AB51E58D22523A5900263F0A /* TweeterViewController.swift in Sources */,
 				AB51E5612251D0E900263F0A /* Tweeter.xcdatamodeld in Sources */,
 				AB51E58F22523C7C00263F0A /* TweeterLogicController.swift in Sources */,

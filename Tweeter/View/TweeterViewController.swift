@@ -10,9 +10,11 @@ import UIKit
 
 open class TweeterViewController: UIViewController {
     
-    @IBOutlet weak var tweetLabel: UILabel!
-    @IBOutlet weak var tweetTextField: UITextField!
+    
+    @IBOutlet weak var tweetTextField: UITextView!
     @IBOutlet weak var tweetButton: UIButton!
+    @IBOutlet weak var table: UITableView!
+    var msgArray: [String] = []
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,11 @@ open class TweeterViewController: UIViewController {
     
     @IBAction func tweetAction(){
         let stringText = self.tweetTextField.text
-        let finalString = TweeterLogic().splitMessage(stringMessage: stringText!)
-        self.tweetLabel.text = finalString
+         msgArray = TweeterLogic().splitMessage(stringMessage: stringText!)
+        self.table.reloadData()
+    
+    
+   
     }
     
 
@@ -36,5 +41,24 @@ open class TweeterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension TweeterViewController: UITableViewDelegate {
+    
+}
+
+extension TweeterViewController: UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TweeterCell
+        let row = indexPath.row
+            cell.textField?.text = self.msgArray[row]
+        return cell
+        }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return msgArray.count
+    }
+    
 
 }
