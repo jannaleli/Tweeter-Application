@@ -14,11 +14,35 @@ open class TweeterViewController: UIViewController {
     @IBOutlet weak var tweetTextField: UITextView!
     @IBOutlet weak var tweetButton: UIButton!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var noTweetLabel: UILabel!
+    @IBOutlet weak var tweetHereLabel: UILabel!
+    @IBOutlet weak var numberLines: UILabel!
     var msgArray: [String] = []
+    
+    public func changeView(){
+        let font = UIFont.systemFont(ofSize: 17.0, weight: .ultraLight)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: UIColor.black,
+            
+            ]
+        
+        
+        self.tweetTextField.attributedText = NSAttributedString(string: "Tweet here please", attributes: attributes)
+        self.tweetTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.tweetTextField.layer.borderWidth = 2.0
+        self.tweetTextField.layer.cornerRadius = 3.0
+    }
+    
+
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-
+        self.changeView()
+        
+        if self.msgArray.count == 0 {
+            self.noTweetLabel.isHidden = false
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -26,6 +50,7 @@ open class TweeterViewController: UIViewController {
         let stringText = self.tweetTextField.text
          msgArray = TweeterLogic().splitMessage(stringMessage: stringText!)
         self.table.reloadData()
+         self.noTweetLabel.isHidden = true
     
     
    
@@ -58,6 +83,25 @@ extension TweeterViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return msgArray.count
+    }
+    
+
+}
+
+extension TweeterViewController: UITextViewDelegate{
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        let font = UIFont.systemFont(ofSize: 17.0, weight: .ultraLight)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: UIColor.black,
+            
+            ]
+        textView.attributedText = NSAttributedString(string: "", attributes: attributes)
+    }
+    
+    public func textViewDidChange(_ textView: UITextView) {
+     let count =   textView.text.count
+    self.numberLines.text = "\(count)"
     }
     
 
