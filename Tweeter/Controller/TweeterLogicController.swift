@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TweeterLogic {
+public class TweeterLogic: TweeterProtocol {
     
     
     open func getMessageCount(stringLen: Int) -> Int{

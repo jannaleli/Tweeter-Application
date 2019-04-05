@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 open class TweeterViewController: UIViewController {
     
     
@@ -17,6 +18,8 @@ open class TweeterViewController: UIViewController {
     @IBOutlet weak var noTweetLabel: UILabel!
     @IBOutlet weak var tweetHereLabel: UILabel!
     @IBOutlet weak var numberLines: UILabel!
+
+    
     var msgArray: [String] = []
     
     public func changeView(){
@@ -35,6 +38,9 @@ open class TweeterViewController: UIViewController {
     }
     
 
+    
+  
+
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +53,10 @@ open class TweeterViewController: UIViewController {
     }
     
     @IBAction func tweetAction(){
-        let stringText = self.tweetTextField.text
-         msgArray = TweeterLogic().splitMessage(stringMessage: stringText!)
+        guard  let stringText = self.tweetTextField.text else {
+            return
+        }
+        msgArray =  TweeterLogic().splitMessage(stringMessage: stringText)
         self.table.reloadData()
          self.noTweetLabel.isHidden = true
     

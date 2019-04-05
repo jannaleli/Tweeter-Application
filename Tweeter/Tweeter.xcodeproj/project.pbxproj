@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB23AA4E225784C6007BA276 /* TweeterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB23AA4D225784C6007BA276 /* TweeterProtocol.swift */; };
+		AB23AA4F225784C6007BA276 /* TweeterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB23AA4D225784C6007BA276 /* TweeterProtocol.swift */; };
+		AB23AA50225784C7007BA276 /* TweeterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB23AA4D225784C6007BA276 /* TweeterProtocol.swift */; };
 		AB51E5592251D0E900263F0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E5582251D0E900263F0A /* AppDelegate.swift */; };
 		AB51E55B2251D0E900263F0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E55A2251D0E900263F0A /* ViewController.swift */; };
 		AB51E55E2251D0E900263F0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB51E55C2251D0E900263F0A /* Main.storyboard */; };
@@ -20,6 +23,7 @@
 		AB51E59022523C7C00263F0A /* TweeterLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */; };
 		AB51E59122523C7D00263F0A /* TweeterLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51E58E22523C7C00263F0A /* TweeterLogicController.swift */; };
 		ABC6C3412253B547008A448C /* TweeterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6C3402253B547008A448C /* TweeterCell.swift */; };
+		ABC6C342225443B4008A448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB51E55C2251D0E900263F0A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB23AA4D225784C6007BA276 /* TweeterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeterProtocol.swift; sourceTree = "<group>"; };
 		AB51E5552251D0E900263F0A /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB51E5582251D0E900263F0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB51E55A2251D0E900263F0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 			children = (
 				AB51E58C22523A5800263F0A /* TweeterViewController.swift */,
 				ABC6C3402253B547008A448C /* TweeterCell.swift */,
+				AB23AA4D225784C6007BA276 /* TweeterProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC6C342225443B4008A448C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +303,7 @@
 			files = (
 				ABC6C3412253B547008A448C /* TweeterCell.swift in Sources */,
 				AB51E58D22523A5900263F0A /* TweeterViewController.swift in Sources */,
+				AB23AA4E225784C6007BA276 /* TweeterProtocol.swift in Sources */,
 				AB51E5612251D0E900263F0A /* Tweeter.xcdatamodeld in Sources */,
 				AB51E58F22523C7C00263F0A /* TweeterLogicController.swift in Sources */,
 				AB51E55B2251D0E900263F0A /* ViewController.swift in Sources */,
@@ -308,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB51E5712251D0ED00263F0A /* TweeterTests.swift in Sources */,
+				AB23AA4F225784C6007BA276 /* TweeterProtocol.swift in Sources */,
 				AB51E59022523C7C00263F0A /* TweeterLogicController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB51E57C2251D0ED00263F0A /* TweeterUITests.swift in Sources */,
+				AB23AA50225784C7007BA276 /* TweeterProtocol.swift in Sources */,
 				AB51E59122523C7D00263F0A /* TweeterLogicController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
